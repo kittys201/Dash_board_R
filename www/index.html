@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>NYSE Market Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body { background-color: #f4f6f9; }
+        .card-title { color: #007bff; font-weight: bold; }
+        .market-up { color: green; }
+        .market-down { color: red; }
+        .stock-symbol-btn { 
+            margin: 5px; 
+            opacity: 0.5; 
+            cursor: pointer; 
+            transition: opacity 0.3s;
+        }
+        .stock-symbol-btn.active { 
+            opacity: 1; 
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">NYSE Market Dashboard</a>
+                </li>
+            </ul>
+        </nav>
+
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <div class="sidebar">
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                        <li class="nav-item">
+                            <a href="#resumen" class="nav-link active">
+                                <i class="nav-icon fas fa-chart-line"></i>
+                                <p>Resumen de Mercado</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#detalles" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>Detalles de Acciones</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#analisis" class="nav-link">
+                                <i class="nav-icon fas fa-chart-bar"></i>
+                                <p>Análisis Avanzado</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper">
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>NYSE Market Dashboard</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 col-6">
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3 id="total-acciones">10</h3>
+                                    <p>Total de Acciones</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6">
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3 id="volumen-total">25,000,000</h3>
+                                    <p>Volumen Total</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6">
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3 id="rendimiento-promedio">2.5%</h3>
+                                    <p>Rendimiento Promedio</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Evolución de Precios</h3>
+                                </div>
+                                <div class="card-body" id="grafico-precios">
+                                    <!-- Gráfico de precios -->
+                                </div>
+                                <div class="card-footer" id="simbolos_toggle_container">
+                                    <!-- Símbolos de toggle se insertarán aquí dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="main-footer">
+            <strong>© 2024 NYSE Market Dashboard</strong>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js"></script>
+</body>
+</html>
