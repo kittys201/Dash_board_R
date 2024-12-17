@@ -12,7 +12,7 @@ Key features include:
 - Real-time performance metrics
 - Detailed stock price and volatility visualizations
 
-[Software Demo Video](#) (Placeholder)
+[Software Demo Video](https://youtu.be/wEeLom-5zVA)
 
 ## Development Environment
 
